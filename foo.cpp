@@ -4,11 +4,6 @@ template <class Func> struct WrappedFunc {
   Func function;
 };
 
-template <class T>
-struct wrapped {
-  T val;
-};
-
 template <class T, class T2> 
 auto operator|(wrapped<T> lhs, T2 rhs) {
   return rhs(lhs);
